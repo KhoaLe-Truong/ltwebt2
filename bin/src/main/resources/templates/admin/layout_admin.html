@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8" />
+<title>User Profile</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- CSS -->
+<link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+<!-- JavaScript -->
+<script th:src="@{/js/bootstrap.js}"></script>
+</head>
+<body>
+	<header class="row">
+		<div class="col">
+			<!-- Đoạn mã header -->
+			<div th:replace="~{admin/fragments/header :: header}"></div>
+		</div>
+	</header>
+
+	<main class="container">
+		<!-- Đoạn mã điều hướng -->
+		<!--
+        <nav class="row">
+            <div class="col">
+                <div th:replace="~{admin/fragments/nav :: nav}"></div>
+            </div>
+        </nav>
+        -->
+
+		<section class="row mt-4">
+			<div class="col mt-5 mb-5">
+				<!-- Nội dung chính -->
+				<div layout:fragment="content"></div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="row">
+		<div class="col">
+			<!-- Đoạn mã footer -->
+			<div th:replace="~{admin/fragments/footer :: footer}"></div>
+		</div>
+	</footer>
+</body>
+</html>
